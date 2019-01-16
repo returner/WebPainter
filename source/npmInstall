@@ -1,0 +1,9 @@
+//https://hyunseob.github.io/2017/03/21/webpack2-beginners-guide/
+
+npm install --save-dev
+
+webpack
+style-loader
+css-loader
+babel-loader babel-core babel-preset-env
+@babel/core
