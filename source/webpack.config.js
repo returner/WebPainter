@@ -1,12 +1,22 @@
+const path = require('path');
+const TSLintPlugin = require('tslint-webpack-plugin');
+
 module.exports = {
+    mode : "development",
     entry : {
-        "entry":"./entry.js"
+        "entry":"./index.ts"
     },
+    devtool : 'inline-source-map',
     output:{
-        filename:"bundle.js"
+        filename:"app.js"
     },
     module : {
         rules :[
+            {
+                test : /\.tsx?$/,
+                use : 'ts-loader',
+                exclude : /node_modules/
+            },
             {
                 test : /\.css$/,
                 use: [
@@ -28,12 +38,15 @@ module.exports = {
                     ]]
                 }
             },
-            {
-                enforce : "pre",
-                test : /\.js$/,
-                exclude : /node_modules/,
-                loader : "eslint-loader",
-            },
+            
         ]
-    }
+    },
+    resolve : {
+        extensions : [".tsx", ".ts", ".js"]
+    },
+    plugins: [
+        new TSLintPlugin({
+            files : ['./app/**/*.ts'],
+        })
+    ]
 };
