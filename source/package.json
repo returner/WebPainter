@@ -4,11 +4,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@types/fabric": "^1.5.48",
     "@types/lodash": "^4.14.119",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^2.1.0",
+    "fabric": "^2.6.0",
     "lodash": "^4.17.11",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
