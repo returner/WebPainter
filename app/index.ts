@@ -1,4 +1,4 @@
-import {HelloWorld} from "./app/helloWorld";
+import {HelloWorld} from "./helloWorld";
 import  {random} from "lodash";
 
 let message =  new HelloWorld();

@@ -1,10 +1,14 @@
 const path = require('path');
 const TSLintPlugin = require('tslint-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode : "development",
     entry : {
-        "entry":"./index.ts"
+        "entry":"./app/index.ts"
+    },
+    output : {
+        path : path.resolve(__dirname, 'docs')
     },
     devtool : 'inline-source-map',
     output:{
@@ -38,13 +42,17 @@ module.exports = {
                     ]]
                 }
             },
-            
         ]
     },
     resolve : {
         extensions : [".tsx", ".ts", ".js"]
     },
     plugins: [
+        new CopyWebpackPlugin([
+            {
+                from : './app/**/*',
+            }
+        ]),
         new TSLintPlugin({
             files : ['./app/**/*.ts'],
         })
