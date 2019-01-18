@@ -356,4 +356,8 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
+# typescript generate files
+/app/**/*.js
+/app/**/*.map
+
 # End of https://www.gitignore.io/api/visualstudio,visualstudiocode
