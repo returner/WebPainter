@@ -48,11 +48,11 @@ module.exports = {
         extensions : [".tsx", ".ts", ".js"]
     },
     plugins: [
-        new CopyWebpackPlugin([
-            {
-                from : './app/**/*',
-            }
-        ]),
+        // new CopyWebpackPlugin([
+        //     {
+        //         from : './app/**/*',
+        //     }
+        // ]),
         new TSLintPlugin({
             files : ['./app/**/*.ts'],
         })
