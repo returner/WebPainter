@@ -3,8 +3,8 @@ const TSLintPlugin = require('tslint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    //mode : "development",
-    mode : "production",
+    mode : "development",
+    //mode : "production",
     entry : {
         "entry":"./app/index.ts"
     },
