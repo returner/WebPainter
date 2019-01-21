@@ -1,6 +1,13 @@
-import {HelloWorld} from "./helloWorld";
-import  {random} from "lodash";
+import {fabric} from "fabric";
 
-let message =  new HelloWorld();
-document.write(message.getText());
-document.write(`Random: ${random(0, 100)}`);
+var canvas = new fabric.Canvas("canvas");
+
+var rect = new fabric.Rect({
+    top : 100,
+            left : 100,
+            width : 60,
+            height : 70,
+            fill : 'red'
+});
+
+canvas.add(rect);
