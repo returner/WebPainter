@@ -11,7 +11,8 @@ module.exports = {
     devtool : 'inline-source-map',
     output:{
         filename:"app.js",
-        path : path.resolve(__dirname, 'docs/app')
+        path : path.resolve(__dirname, 'docs/app'),
+        publicPath : "/assets"
     },
     module : {
         rules :[
