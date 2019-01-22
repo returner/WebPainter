@@ -12,7 +12,7 @@ module.exports = {
     output:{
         filename:"app.js",
         path : path.resolve(__dirname, 'docs/app'),
-        publicPath : "/assets"
+        publicPath : "/app"
     },
     module : {
         rules :[
