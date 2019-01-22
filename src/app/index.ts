@@ -1,4 +1,4 @@
-import {fabric} from "fabric";
+import {fabric} from "fabric"
 
 var canvas = new fabric.Canvas("canvas");
 

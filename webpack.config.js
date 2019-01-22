@@ -6,14 +6,12 @@ module.exports = {
     mode : "development",
     //mode : "production",
     entry : {
-        "entry":"./app/index.ts"
-    },
-    output : {
-        path : path.resolve(__dirname, 'docs')
+        "entry":"./src/app/index.ts"
     },
     devtool : 'inline-source-map',
     output:{
-        filename:"app.js"
+        filename:"app.js",
+        path : path.resolve(__dirname, 'docs/app')
     },
     module : {
         rules :[
@@ -49,13 +47,16 @@ module.exports = {
         extensions : [".tsx", ".ts", ".js"]
     },
     plugins: [
+        new TSLintPlugin({
+            files : ['./src/app/**/*.ts'],
+        }),
         // new CopyWebpackPlugin([
         //     {
-        //         from : './app/**/*',
+        //         from : './src/**/*.html',
+        //         to: './',
+        //         force : true,
+        //         toType : 'glob'
         //     }
-        // ]),
-        new TSLintPlugin({
-            files : ['./app/**/*.ts'],
-        })
+        // ])
     ]
 };
