@@ -3,8 +3,8 @@ import { Rectangle } from "./model/Rectangle";
 import { Color } from "./model/Color";
 import { Album } from "./util/Album";
 
-var canvas = new Album();
-let cc = canvas.CreateCanvas("canvas").add(new fabric.Rect({
+let canvas = new Album();
+canvas.CreateCanvas("canvas").add(new fabric.Rect({
     top : 100,
     left : 100,
     width : 100,
