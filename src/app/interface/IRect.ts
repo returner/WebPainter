@@ -5,6 +5,5 @@ export interface IRect
     Left : number;
     Width : number;
     Height : number;
-
 }
 
