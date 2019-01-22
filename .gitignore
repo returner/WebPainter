@@ -357,7 +357,7 @@ ASALocalRun/
 healthchecksdb
 
 # typescript generate files
-/app/**/*.js
-/app/**/*.map
+/src/**/*.js
+/src/**/*.map
 
 # End of https://www.gitignore.io/api/visualstudio,visualstudiocode
