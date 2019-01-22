@@ -1,17 +1,13 @@
 import {fabric} from "fabric"
 import { Rectangle } from "./model/Rectangle";
 import { Color } from "./model/Color";
+import { Album } from "./util/Album";
 
-var canvas = new fabric.Canvas("canvas");
-var defaultValue = new Rectangle(100, 160, 170);
-defaultValue.setColor(Color.Green);
-
-var rect = new fabric.Rect({
+var canvas = new Album();
+let cc = canvas.CreateCanvas("canvas").add(new fabric.Rect({
     top : 100,
-            left : defaultValue.Left,
-            width : defaultValue.Width,
-            height : defaultValue.Height,
-            fill : defaultValue.FillColor
-});
-
-canvas.add(rect);
+    left : 100,
+    width : 100,
+    height : 100,
+    fill : 'orange'
+}));
