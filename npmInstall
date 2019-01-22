@@ -2,8 +2,10 @@
 
 npm install --save-dev
 
-webpack
-style-loader
-css-loader
-babel-loader babel-core babel-preset-env
-@babel/core
+
+
+#npm build
+npm run build
+
+#개발환경
+npm run devserver
