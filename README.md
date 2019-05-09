@@ -1,13 +1,13 @@
-# album-creator
-* Graphic Editor for Web
+# Painter for web
+Graphic Editor for Web
 
-#npm package install
+## npm package install
 * npm install --save-dev
 
-#npm build
+## npm build
 * npm run build
 
-#dev environment
+## dev environment
 * npm run devserver
 
 https://returner.github.io/album-creator/
