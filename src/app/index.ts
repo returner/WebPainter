@@ -1,5 +1,4 @@
 import {fabric} from "fabric"
-import { Rectangle } from "./model/Rectangle";
 import { Color } from "./model/Color";
 import { Album } from "./util/Album";
 
