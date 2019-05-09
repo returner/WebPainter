@@ -1,5 +1,6 @@
 # Painter for web
 Graphic Editor for Web
+https://returner.github.io/painter/
 
 ## npm package install
 * npm install --save-dev
@@ -10,4 +11,4 @@ Graphic Editor for Web
 ## dev environment
 * npm run devserver
 
-https://returner.github.io/album-creator/
+
