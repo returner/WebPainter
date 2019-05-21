@@ -3,7 +3,63 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <canvas id="canvas" width="300" height="300"></canvas>
+        <div class="container">
+          <div class="row">
+            <div id="topMenu" class="col">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <button id="btnCreate" class="btn btn-outline-primary btn-sm">create</button>
+                <button id="btnExport" class="btn btn-outline-primary btn-sm">export</button>
+            </div>
+          </div>
+          <div class="row">
+            <div id="toolbars" class="col">
+              <div class="row">
+                <div class="col">
+                  <!--buttons-->
+                  <div class="row">
+                    <div class="col">
+                      <button id="btnRectangle" class="btn btn-outline-primary">Rectangle</button>
+                      <button id="btnCircle" class="btn btn-outline-primary">Circle</button>
+                    </div>
+                    <div class="col"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button class="btn btn-outline-primary">Button</button>
+                      <button class="btn btn-outline-primary">Button</button>
+                    </div>
+                    <div class="col"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button class="btn btn-outline-primary">Button</button>
+                      <button class="btn btn-outline-primary">Button</button>
+                    </div>
+                    <div class="col"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button class="btn btn-outline-primary">Button</button>
+                      <button class="btn btn-outline-primary">Button</button>
+                    </div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="contents" class="col-lg-3">content</div>
+          </div>
+        </div>
     </body>
+
     <script type="text/javascript" src="./app/app.js"></script>
 </html>

@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 const path = require('path');
 const TSLintPlugin = require('tslint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -42,6 +43,34 @@ module.exports = {
                     ]]
                 }
             },
+            {
+                test: /\.(scss)$/,
+                use: [
+                  {
+                    // Adds CSS to the DOM by injecting a `<style>` tag
+                    loader: 'style-loader'
+                  },
+                  {
+                    // Interprets `@import` and `url()` like `import/require()` and will resolve them
+                    loader: 'css-loader'
+                  },
+                  {
+                    // Loader for webpack to process CSS with PostCSS
+                    loader: 'postcss-loader',
+                    options: {
+                      plugins: function () {
+                        return [
+                          require('autoprefixer')
+                        ];
+                      }
+                    }
+                  },
+                  {
+                    // Loads a SASS/SCSS file and compiles it to CSS
+                    loader: 'sass-loader'
+                  }
+                ]
+              }
         ]
     },
     resolve : {
@@ -51,6 +80,11 @@ module.exports = {
         new TSLintPlugin({
             files : ['./src/app/**/*.ts'],
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            Util: 'exports-loader?Util!bootstrap/js/dist/util'
+        })
         // new CopyWebpackPlugin([
         //     {
         //         from : './src/**/*.html',
